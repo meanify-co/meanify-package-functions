@@ -1,6 +1,6 @@
 <?php
 
-namespace Meanify\PackageFunctions;
+namespace Meanify\PackageFunctions\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
