@@ -24,7 +24,7 @@ class MeanifyDispatcher
             );
         }
 
-        return $this->__call('activityLog', []);
+        return $this->__call('meanify_activity_log', []);
     }
 
     /**
@@ -40,7 +40,7 @@ class MeanifyDispatcher
             );
         }
 
-        return $this->__call('codeReview', []);
+        return $this->__call('meanify_code_review', []);
     }
 
     /**
@@ -56,7 +56,7 @@ class MeanifyDispatcher
             );
         }
 
-        return $this->__call('commands', []);
+        return $this->__call('meanify_support_commands', []);
     }
 
     /**
@@ -72,7 +72,7 @@ class MeanifyDispatcher
             );
         }
 
-        return $this->__call('helpers', []);
+        return $this->__call('meanify_helpers', []);
     }
 
     /**
@@ -88,7 +88,7 @@ class MeanifyDispatcher
             );
         }
 
-        return $this->__call('notifications', []);
+        return $this->__call('meanify_notifications', []);
     }
 
     /**
@@ -104,7 +104,7 @@ class MeanifyDispatcher
             );
         }
 
-        return $this->__call('obfuscator', []);
+        return $this->__call('meanify_obfuscator', []);
     }
 
     /**
@@ -120,7 +120,7 @@ class MeanifyDispatcher
             );
         }
 
-        return $this->__call('paymentHub', [$gatewayActiveKey, $gatewayVersion, $gatewayEnvironment, $gatewayParams]);
+        return $this->__call('meanify_payment_hub', [$gatewayActiveKey, $gatewayVersion, $gatewayEnvironment, $gatewayParams]);
     }
 
     /**
@@ -136,6 +136,6 @@ class MeanifyDispatcher
             );
         }
 
-        return $this->__call('permissions', [$application, $source, $throws]);
+        return $this->__call('meanify_permissions', [$application, $source, $throws]);
     }
 }

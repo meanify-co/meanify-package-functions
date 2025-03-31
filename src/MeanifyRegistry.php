@@ -28,12 +28,12 @@ class MeanifyRegistry
         return array_key_exists($name, self::$functions);
     }
 
-    public static function call(string $name, array $arguments = [])
+    public static function call(string $function_name, array $arguments = [])
     {
-        if (!self::has($name)) {
-            throw new \BadMethodCallException("Function '{$name}' not found in MeanifyRegistry.");
+        if (function_exists($function_name)) {
+            return $function_name(...$arguments);
         }
 
-        return call_user_func_array(self::$functions[$name], $arguments);
+        throw new \BadMethodCallException("Function not found in MeanifyRegistry or as global '{$function_name}()'.");
     }
 }
