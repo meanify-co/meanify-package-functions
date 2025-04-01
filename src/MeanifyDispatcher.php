@@ -110,7 +110,7 @@ class MeanifyDispatcher
     /**
      * Global function for meanify-co/laravel-notifications
      *
-     * @return
+     * @return \Meanify\LaravelNotifications\Support\NotificationBuilder
      */
     public function notifications()
     {
