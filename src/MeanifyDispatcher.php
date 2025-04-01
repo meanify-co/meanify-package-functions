@@ -28,6 +28,22 @@ class MeanifyDispatcher
     }
 
     /**
+     * Global function for meanify-co/meanify-api-resolver
+     *
+     * @return
+     */
+    public function api(?string $host = null, ?string $api_key = null, array $constant_headers = [])
+    {
+        if (!InstalledVersions::isInstalled('meanify-co/meanify-api-resolver')) {
+            throw new \RuntimeException(
+                "The package 'meanify-co/meanify-api-resolver' must be installed to use meanify()->api()."
+            );
+        }
+
+        return $this->__call('meanify_api_resolver', [$host, $api_key, $constant_headers]);
+    }
+
+    /**
      * Global function for meanify-co/meanify-code-review
      *
      * @return
@@ -57,6 +73,22 @@ class MeanifyDispatcher
         }
 
         return $this->__call('meanify_support_commands', []);
+    }
+
+    /**
+     * Global function for meanify-co/meanify-file-manager
+     *
+     * @return
+     */
+    public function fileManager(?string $host = null, ?string $api_key = null)
+    {
+        if (!InstalledVersions::isInstalled('meanify-co/meanify-file-manager')) {
+            throw new \RuntimeException(
+                "The package 'meanify-co/meanify-file-manager' must be installed to use meanify()->fileManager()."
+            );
+        }
+
+        return $this->__call('meanify_file_manager', [$host, $api_key]);
     }
 
     /**
