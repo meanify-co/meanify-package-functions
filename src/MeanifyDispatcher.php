@@ -30,7 +30,7 @@ class MeanifyDispatcher
     /**
      * Global function for meanify-co/meanify-api-resolver
      *
-     * @return
+     * @return \Meanify\ApiResolver\Services\ApiResolverService
      */
     public function api(?string $host = null, ?string $api_key = null, array $constant_headers = [])
     {
@@ -78,7 +78,7 @@ class MeanifyDispatcher
     /**
      * Global function for meanify-co/meanify-file-manager
      *
-     * @return
+     * @return \Meanify\FileManager\Services\FileManagerService
      */
     public function fileManager(?string $host = null, ?string $api_key = null)
     {
