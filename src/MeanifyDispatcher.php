@@ -112,7 +112,7 @@ class MeanifyDispatcher
      *
      * @return \Meanify\LaravelNotifications\Support\NotificationBuilder
      */
-    public function notifications(string $notification_template_key, object $to_user, ?string $locale = null)
+    public function notifications(?string $notification_template_key = null, ?object $to_user = null, ?string $locale = null)
     {
         if (!InstalledVersions::isInstalled('meanify-co/laravel-notifications')) {
             throw new \RuntimeException(
